@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kazik</string>
+    <string name="win">Красава! Угадал как боженька!</string>
+    <string name="loss">Не, ну ты и лошня. Даже выиграть не можешь…</string>
+</resources>
