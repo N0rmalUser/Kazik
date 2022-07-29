@@ -1,5 +1,6 @@
 package com.androidKazik
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -37,48 +38,19 @@ class MainActivity : AppCompatActivity() {
         mButton10 = findViewById(R.id.button10)
         mChislo = findViewById(R.id.chislo)
         mTextView=findViewById(R.id.textview)
-        mButton1.setOnClickListener {
-            val x=1
-            qwe(x)
-        }
-        mButton2.setOnClickListener {
-            val x=2
-            qwe(x)
-        }
-        mButton3.setOnClickListener {
-            val x=3
-            qwe(x)
-        }
-        mButton4.setOnClickListener {
-            val x=4
-            qwe(x)
-        }
-        mButton5.setOnClickListener {
-            val x=5
-            qwe(x)
-        }
-        mButton6.setOnClickListener {
-            val x=6
-            qwe(x)
-        }
-        mButton7.setOnClickListener {
-            val x=7
-            qwe(x)
-        }
-        mButton8.setOnClickListener {
-            val x=8
-            qwe(x)
-        }
-        mButton9.setOnClickListener {
-            val x=9
-            qwe(x)
-        }
-        mButton10.setOnClickListener {
-            val x=10
-            qwe(x)
-        }
+        mButton1.setOnClickListener { qwe(x=1) }
+        mButton2.setOnClickListener { qwe(x=2) }
+        mButton3.setOnClickListener { qwe(x=3) }
+        mButton4.setOnClickListener { qwe(x=4) }
+        mButton5.setOnClickListener { qwe(x=5) }
+        mButton6.setOnClickListener { qwe(x=6) }
+        mButton7.setOnClickListener { qwe(x=7) }
+        mButton8.setOnClickListener { qwe(x=8) }
+        mButton9.setOnClickListener { qwe(x=9) }
+        mButton10.setOnClickListener { qwe(x=10) }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun qwe(x:Int) {
         val rand = (1..10).random()
         val messageWin =R.string.win
@@ -95,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             0,1,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,25,26,27,28,29,30->"Ты выиграл $mIndex раз"
             else -> ("Ты выиграл $mIndex раз(а)")
         }
-        mChislo.text = "Ты выбрал: $x \n Правильный ответ: $rand"
+        mChislo.text = "Ты выбрал: $x \nПравильный ответ: $rand"
     }
 }
 
