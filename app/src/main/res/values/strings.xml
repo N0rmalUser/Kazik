@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Kazik</string>
-    <string name="win">Красава! Угадал как боженька!</string>
-    <string name="loss">Не, ну ты и лошня. Даже выиграть не можешь…</string>
+    <string name="win">-1000 соц.рейтинга((( Партия тобой не гордится((</string>
+    <string name="loss">Правильно!! +10к соцюрейтинга и кошка-жена!</string>
 </resources>
