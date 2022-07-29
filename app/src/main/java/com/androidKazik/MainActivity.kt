@@ -23,7 +23,7 @@ open class MainActivity : AppCompatActivity() {
     private lateinit var mChislo: TextView
     private lateinit var mCheckbox:CheckBox
     var mIndex = 0
-    var q = false
+    var q = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
