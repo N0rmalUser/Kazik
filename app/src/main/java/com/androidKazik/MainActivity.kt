@@ -90,9 +90,12 @@ class MainActivity : AppCompatActivity() {
         else{
             Toast.makeText(this, messageLoss, Toast.LENGTH_SHORT).show()
         }
-        mTextView.text = "Ты выиграл $mIndex раз(a)"
-        mChislo.text = "Ты выбрал: $x\n" +
-                "Правильный ответ: $rand"
+        mTextView.text = when(mIndex) {             // мне было лень придумыватб или искать функцию для определения, будет ли в конце слова стоять "а" или нет.
+            2,3,4,22,23,24, ->"Ты выиграл $mIndex раза"
+            0,1,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,25,26,27,28,29,30->"Ты выиграл $mIndex раз"
+            else -> ("Ты выиграл $mIndex раз(а)")
+        }
+        mChislo.text = "Ты выбрал: $x \n Правильный ответ: $rand"
     }
 }
 
