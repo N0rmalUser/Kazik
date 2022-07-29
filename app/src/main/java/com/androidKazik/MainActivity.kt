@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 
@@ -20,8 +21,9 @@ open class MainActivity : AppCompatActivity() {
     private lateinit var mButton10: Button
     private lateinit var mTextView: TextView
     private lateinit var mChislo: TextView
+    private lateinit var mCheckbox:CheckBox
     var mIndex = 0
-
+    var q = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,15 +50,29 @@ open class MainActivity : AppCompatActivity() {
         mButton10.setOnClickListener { qwe(10) }
         mChislo = findViewById(R.id.chislo)
         mTextView = findViewById(R.id.textview)
+        mCheckbox = findViewById(R.id.checkBox)
+        mCheckbox.setOnClickListener {
+            q = when(q){
+                false -> true
+                true-> false
+            }
+        }
     }
+
     @SuppressLint("SetTextI18n")
     fun qwe(x: Int) {
         val rand = (1..10).random()
-        if (x == rand) {
-            mIndex += 1
-            Toast.makeText(this, R.string.win, Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, R.string.loss, Toast.LENGTH_SHORT).show()
+        if (q){
+            if (x == rand) {
+                mIndex += 1
+                Toast.makeText(this, R.string.win, Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, R.string.loss, Toast.LENGTH_SHORT).show()
+            }
+        }else{
+            if (x == rand) {
+                mIndex += 1
+            }
         }
         when (mIndex) {// мне было лень придумывать или искать функцию для определения, будет ли в конце слова стоять "а" или нет.
             2, 3, 4, 22, 23, 24, -> "Ты выиграл $mIndex раза"
