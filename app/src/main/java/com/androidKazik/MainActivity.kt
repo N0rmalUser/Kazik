@@ -27,7 +27,6 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         mButton1 = findViewById(R.id.button1)
         mButton1.setOnClickListener { qwe(1) }
         mButton2 = findViewById(R.id.button2)
